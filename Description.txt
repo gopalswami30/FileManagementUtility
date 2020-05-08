@@ -1,0 +1,48 @@
+In this project “file management”.we used the following header file.
+List are below:-
+1)iostream:- iostream is an input output stream in C++. You can perform basic input and output through cin and cout which are defined in iostream header. ... Iostream in cpp simply meansinput/output stream which is a standard header library that defines input/ output objects like cin, cout etc…
+2)stdlib.h:- is the header of the general purpose standard library of C programming language which includes functions involving memory allocation, process control, conversions and others. It is compatible with C++ and is known as cstdlib in C++. The name "stdlib" stands for "standard library".
+3)conio.h:-  is a C header file used mostly by MS-DOS compilers to provide console input/output. It is not part of the C standard library or ISO C, nor is it defined by POSIX. This header declares several useful library functions for performing "console input and output" from a program.   
+4)dirent.h:- It also defines the structure dirent which includes the following members: ino_t d_ino file serial number char d_name[] name of entry. The type ino_t is defined as ...
+‎following function are present in dirent i.e.Readdir · ‎Opendir · ‎Telldir · ‎Closedir.
+5)windows.h:- windows.h is a Windows-specific header file for the C and C++ programming languages which contains declarations for all of the functions in the Windows API, all the common macros used by Windows programmers, and all the data types used by the various functions and subsystems.
+
+6)time.h:- C Programming/time.h. From Wikibooks, open books for an open world. < C Programming. In C programming language time.h (used as ctime in C++) is aheader file defined in the C Standard Library that contains time and date function declarations to provide standardized access to time/date manipulation and formatting.
+
+5)fstream:- This data type represents the file stream generally, and has the capabilities of both ofstream and ifstream which means it can create files, write information to files, and read information from files. To perform file processing in C++, header files <iostream> and <fstream> must be included in your C++ source file.
+There are the function used in this program.
+1)listfiles():-  in this function we made two type of pointer one is DIR(which is used to opendir() function) another is dirent.and make a const char type pointer which is point the sourcepath ponter which is made by c_str()(this function convert string to const char type pointer).by using while loop to readdir() and print the present file.we check directory existence.if directory exist then read all directory file and print on screen.if not exist print “directory does not exist”.ask do you want to see another list of file then call listfiles().
+
+2)copyfile():-in this function,we take four  argument of string type.and make two file pointer one is used for open file in reading mode and another is used for writing mode.if we enter the wrong file name then”file not found” is display on screen.if correct file name ,we copy source file into destination file.then ask do you want to another try .if press 1 for same path then call copyfile().if press 2 then call copypath and path function.if other option return to main menu.
+  
+3)copypath():-in this function, we input the source path.if path exist then call the path() function.if not exist then ask do you want to another try if press 1 then call copypath().if not return to main menu.
+4)path():-in this function, we input destionation path.if path exist then call copyfile().if not exist then ask another try if press 1 then call path().if not return to main menu.
+
+5)deletefile():-in this fuction,we take an parameter of string type,and type the file name which are you delete by using remove() function .if file not exist then display “error in removing file”. if exist then “file successfully deleted”.and ask do you want delete another file for same path or different path.if you choose same path then press ‘1’,and call deleteFile.if press ‘2’ for different path then call deletepath().if choose another key then it return to main option.
+
+6)delpath():-in this we ask delete file path().if directory exist then call deleteFile().if not exist or fail open directory of some other reason then we ask that do you want another try.if yes again call delpath(). 
+
+7) getselectedoption():-in this function we display the five option.
+a)list all files
+b)deleted file
+c)take backup
+d)restore from backup
+e)exit
+*on selected choice first,we call the listfiles() function and call again recursively listfiles and call getselectedoption().
+*On selected choice second,call the delpath() function.
+*On selecting choice third, call the copypath(arg 1)and path(arg 1,arg 2). 
+*on selecting choice fourth ,we again follow the third option step.
+*on selecting choice fifth ,the program will terminate and print exiting…,press enter to close……. and return to the DOS mode
+8)fexists():-this is used to check the filename exist or not in givendirectory. 
+9)sleep():-this function is used to hold the sec for millisecond.
+
+10) gotoxy():-  gotoxy function places cursor at a desired location on screen i.e. we can change cursor position using gotoxy function.
+
+11)scroll_note():-this function is used to set the front page of project.in this function we set the print of word one by one “INDIAN OIL CORPORATE LIMITED” and this one is use movement of word in one and from another side and meet at middle of sreen“WELCOME TO FILE MANAGEMENT”.and set the current date and time.
+
+12)frame_fix():-this function is used to set the frame of sub function of project.in this we used two straight line parallel to each other in between them work is done.
+13)frame():-this function is used to set the frame of main fuction.in between them we set five function *list of files *delete file *take backup *restore from backup *Exit by calling frame() function in getselectedoption() function.and we set date and time in middle of first line of frame parallel to x axis.
+14)call():- this function is used to back to main fuction getselectedoption().and clear the previous work on the screen and print “please wait…..” to movement of “.” .
+15)in main function, we call scroll_note() and getselectedoption().
+16)*date_time():-this function is used to return the local date and time.
+Class date:-in this class we define public variable of date and time.and a  method date_time. 
